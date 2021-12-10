@@ -3,11 +3,18 @@ package com.humanbooster.monpetitprojet;
 public class Main {
 
     public static void main(String[] args) {
-        Book b = new Book("Les pages jaunes", 548);
-        Person p1 = new Person("Thomas", "Lhomme", 30, b);
 
+        String mName = "Menu du jour";
+        Starter s = new Starter("Endives", 10.35f);
+        MainCourse mc = new MainCourse("Purée au jambon", 12.41f);
+        Dessert d = new Dessert("Baba au rhum", 6.99f);
 
-        System.out.println(p1.getCategory());
+        Menu m = new Menu(mName, s, mc, d);
+
+        System.out.println(m);
+
+        System.out.println("Le prix total du menu: " + m.getName() + " est de: " + m.getPrixTotal() + "€");
+
     }
 }
 
