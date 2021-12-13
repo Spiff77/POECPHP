@@ -1,23 +1,27 @@
 package com.humanbooster.monpetitprojet;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Dessert d1 = new Dessert("Mousse au chocolat");
-        Dessert d2 = new Dessert("Baba au Rhum");
+        Category ca = new Category("Langues");
+        Category cb = new Category("Sciences");
+
+        Teacher res1 = new Teacher("JeanMich", "Mich");
+
+        Room r1 = new Room("Salle verte", 60);
+        Room r2 = new Room("Salle bleu", 40);
+
+        Course c1 = new Course("FR3420", "Cours de français",  120, r1);
+        Course c2 = new Course("MA3420", "Cours de Math",  120, r2);
+
+        res1.add(r1);
+        res1.add(r2);
+
+        System.out.println(res1);
 
 
-        System.out.println(d1);
-        System.out.println(d2);
 
-        Dessert.setPrice(400);
-
-        System.out.println(d1);
-        System.out.println(d2);
-
-
-        // Dessert.price = 10
-        // d1 => name="",
-        // d2 => name="",
     }
 }
 

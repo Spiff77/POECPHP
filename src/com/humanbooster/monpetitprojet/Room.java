@@ -3,20 +3,10 @@ package com.humanbooster.monpetitprojet;
 public class Room {
     private String name;
     private int capacity;
-    private Teacher responsable;
 
-    public Room(String name, int capacity, Teacher responsable) {
+    public Room(String name, int capacity) {
         this.name = name;
-        this.responsable = responsable;
         this.capacity = capacity;
-    }
-
-    public Teacher getResponsable() {
-        return responsable;
-    }
-
-    public void setResponsable(Teacher responsable) {
-        this.responsable = responsable;
     }
 
     public String getName() {
@@ -40,7 +30,6 @@ public class Room {
         return "Room{" +
                 "name='" + name + '\'' +
                 ", capacity=" + capacity +
-                ", responsable=" + responsable +
                 '}';
     }
 }
