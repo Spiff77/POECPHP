@@ -9,7 +9,7 @@ public class Course {
     private Category category;
     private Room room;
 
-    public Course(String ref, String name, float price, float minPrice, Room room) {
+    public Course(String ref, String name, float price, Room room) {
         this.ref = ref;
         this.name = name;
         this.room = room;
