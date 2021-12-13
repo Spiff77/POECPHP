@@ -1,19 +1,27 @@
 package com.humanbooster.monpetitprojet;
 
 public class Main {
-
     public static void main(String[] args) {
+        Category ca = new Category("Langues");
+        Category cb = new Category("Sciences");
 
-        String mName = "Menu du jour";
-        Starter s = new Starter("Endives", 10.35f);
-        MainCourse mc = new MainCourse("Purée au jambon", 12.41f);
-        Dessert d = new Dessert("Baba au rhum", 6.99f);
+        Teacher res1 = new Teacher("JeanMich", "Mich");
 
-        Menu m = new Menu(mName, s, mc, d);
+        Room r1 = new Room("Salle verte", 60, res1);
+        Room r2 = new Room("Salle bleu", 40, res1);
 
-        System.out.println(m);
 
-        System.out.println("Le prix total du menu: " + m.getName() + " est de: " + m.getPrixTotal() + "€");
+        Course c1 = new Course("FR3420", "Cours de français", 100, 120, r1);
+        Course c2 = new Course("MA3420", "Cours de Math", 150, 120, r2);
+
+        c1.setCategory(ca);
+        c2.setCategory(cb);
+
+
+        System.out.println(
+                c2.getRoom().getResponsable().getFirstname() +
+                " " + c2.getRoom().getResponsable().getLastname().toUpperCase()
+        );
 
     }
 }

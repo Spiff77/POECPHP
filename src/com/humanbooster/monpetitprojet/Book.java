@@ -2,36 +2,46 @@ package com.humanbooster.monpetitprojet;
 
 public class Book {
 
-    private String title;
-    private int nbPage;
+    private String name;
+    private String editor;
+    private Library library;
 
-    public Book(String title, int nbPage) {
-        this.title = title;
-        this.nbPage = nbPage;
+    public Book(String name, String editor, Library library) {
+        this.name = name;
+        this.editor = editor;
+        this.library = library;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getNbPage() {
-        return nbPage;
+    public String getEditor() {
+        return editor;
     }
 
-    public void setNbPage(int nbPage) {
-        this.nbPage = nbPage;
+    public void setEditor(String editor) {
+        this.editor = editor;
+    }
+
+    public Library getLibrary() {
+        return library;
+    }
+
+    public void setLibrary(Library library) {
+        this.library = library;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Book{");
-        sb.append("title='").append(title).append('\'');
-        sb.append(", nbPage=").append(nbPage);
-        sb.append('}');
-        return sb.toString();
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", editor='" + editor + '\'' +
+                ", library=" + library +
+                '}';
     }
 }

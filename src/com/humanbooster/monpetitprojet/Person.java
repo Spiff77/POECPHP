@@ -1,6 +1,8 @@
 package com.humanbooster.monpetitprojet;
 
 
+import java.awt.print.Book;
+
 public class Person {
 
     private String firstName;
@@ -9,19 +11,6 @@ public class Person {
     private boolean employee = true;
     private String category;
     private Book book;
-
-    public void displayInfos() {
-        String resultat = "Je m'appelle " + this.firstName + " " + this.lastName +
-                " et j'ai " + this.age + " ans et je suis donc " + category;
-
-        if (employee == true) {
-            resultat = resultat + " et je suis employé";
-            // OU: resultat += " et je suis employé";
-        } else {
-            resultat = resultat + " et je suis hélas, au chomage (mais plus pour très longtemps)";
-        }
-        System.out.println(resultat);
-    }
 
 
     public Person(String firstName, String lastName, int age, Book book) {
@@ -40,13 +29,6 @@ public class Person {
         }
     }
 
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
-    }
 
     public int getAge() {
         return age;
