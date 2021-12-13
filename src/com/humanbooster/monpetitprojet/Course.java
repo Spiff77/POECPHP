@@ -5,7 +5,7 @@ public class Course {
     private String ref;
     private String name;
     private float price;
-    private float minPrice;
+    private static float minPrice = 100;
     private Category category;
     private Room room;
 
@@ -13,7 +13,6 @@ public class Course {
         this.ref = ref;
         this.name = name;
         this.room = room;
-        this.minPrice = minPrice;
         this.setPrice(price);
     }
 
@@ -26,7 +25,7 @@ public class Course {
     }
 
     public void setPrice(float price) {
-        if(price < this.minPrice){
+        if(price < Course.minPrice){
             this.price = 120;
         }else{
             this.price = price;
@@ -52,13 +51,12 @@ public class Course {
         return price;
     }
 
-
-    public float getMinPrice() {
+    public static float getMinPrice() {
         return minPrice;
     }
 
-    public void setMinPrice(float minPrice) {
-        this.minPrice = minPrice;
+    public static void setMinPrice(float minPrice) {
+        Course.minPrice = minPrice;
     }
 
     public Category getCategory() {

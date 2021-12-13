@@ -1,12 +1,23 @@
 package com.humanbooster.monpetitprojet;
 
 public class Dessert {
-    private String name;
-    private float price;
 
-    public Dessert(String name, float price) {
+    private String name;
+    private static float price = 10;
+
+    public Dessert(String name) {
         this.name = name;
-        this.price = price;
+    }
+    public static float getPrice() {
+        return price;
+    }
+
+    public static void setPrice(float price) {
+        if(price > 20) {
+            Dessert.price = 20;
+        } else{
+            Dessert.price = price;
+        }
     }
 
     public String getName() {
@@ -17,19 +28,12 @@ public class Dessert {
         this.name = name;
     }
 
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Dessert{");
         sb.append("name='").append(name).append('\'');
-        sb.append(", price=").append(price);
+        sb.append(", price=").append(Dessert.price);
         sb.append('}');
         return sb.toString();
     }

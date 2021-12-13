@@ -14,7 +14,7 @@ public class Menu {
     }
 
     public float getPrixTotal() {
-        float total = this.starter.getPrice() + this.mainCourse.getPrice() + this.dessert.getPrice();
+        float total = this.starter.getPrice() + this.mainCourse.getPrice() + Dessert.getPrice();
         return total;
     }
 

@@ -2,27 +2,22 @@ package com.humanbooster.monpetitprojet;
 
 public class Main {
     public static void main(String[] args) {
-        Category ca = new Category("Langues");
-        Category cb = new Category("Sciences");
-
-        Teacher res1 = new Teacher("JeanMich", "Mich");
-
-        Room r1 = new Room("Salle verte", 60, res1);
-        Room r2 = new Room("Salle bleu", 40, res1);
+        Dessert d1 = new Dessert("Mousse au chocolat");
+        Dessert d2 = new Dessert("Baba au Rhum");
 
 
-        Course c1 = new Course("FR3420", "Cours de français", 100, 120, r1);
-        Course c2 = new Course("MA3420", "Cours de Math", 150, 120, r2);
+        System.out.println(d1);
+        System.out.println(d2);
 
-        c1.setCategory(ca);
-        c2.setCategory(cb);
+        Dessert.setPrice(400);
+
+        System.out.println(d1);
+        System.out.println(d2);
 
 
-        System.out.println(
-                c2.getRoom().getResponsable().getFirstname() +
-                " " + c2.getRoom().getResponsable().getLastname().toUpperCase()
-        );
-
+        // Dessert.price = 10
+        // d1 => name="",
+        // d2 => name="",
     }
 }
 
